@@ -1,12 +1,4 @@
-# from sys import argv
-#
-# private_key_bits = argv[1] if (argv[1]) else "nooh";
-#
-# print(private_key_bits)
 
-# print("first argument:", argv[0])
-# print("getting started", argv[1])
-# print("getting started", argv[3])
 
 import argparse
 import os
@@ -14,9 +6,7 @@ import binascii
 import ecdsa
 import hashlib
 
-# from ecdsa.curves import SECP256k1
-# from ecdsa.keys import SigningKey, VerifyingKey
-# from ecdsa.util import string_to_number, number_to_string
+
 
 
 # Range of valid private keys is governed by the secp256k1 ECDSA standard used by Bitcoin: any 256-bit number from 0x1 to 0xFFFF FFFF FFFF FFFF FFFF FFFF FFFF FFFE BAAE DCE6 AF48 A03B BFD2 5E8C D036 4140 is a valid private key.
@@ -137,10 +127,6 @@ if args.encode:
 if args.toWif:
     print( privKeyToWIF(args.toWif, wif_version_byte, type_pub) )
     exit()
-
-
-
-
 
 
 
